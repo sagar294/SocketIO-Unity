@@ -98,9 +98,11 @@ public class SocketHandler : MonoBehaviour
 
 	void Init ()
 	{
+		//Socket setup and connect
 		socket.SetUpWS ();
 		socket.Connect ();
 
+		//Event Initialize
 		socket.On ("open", TestOpen);
 		socket.On ("error", TestError);
 		socket.On ("close", TestClose);
